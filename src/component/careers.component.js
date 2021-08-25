@@ -8,11 +8,11 @@ import Image1 from "../assets/1x/Career picture.jpg";
 export default function Example() {
   return (
     <div className="grid grid-cols-1 bg-gravy pb-10">
-      <div className="w-full">
+      <div className="w-full lg:w-1/2 lg:mx-auto">
         <img className=" shadow  " alt="gallery" src={Image1}></img>
       </div>
 
-      <div className="m-5 mt-10">
+      <div className="m-5 mt-10 lg:mx-96 lg:text-center ">
         <h1 className=" text-4xl font-bold text-gravy_accent">CAREERS</h1>
         <p className="text-white my-3">
           We at Gravy are always on the lookout for talented individuals to come
@@ -23,7 +23,9 @@ export default function Example() {
           really chill, positive outlook and run our restaurants with our team
           as a family.
         </p>
-        <h3 className="text-2xl font-semibold text-gravy_accent">Give us a Chance, You won't Regret it.</h3>
+        <h3 className="text-2xl font-semibold text-gravy_accent">
+          Give us a Chance, You won't Regret it.
+        </h3>
 
         <p className="text-gravy_accent text-xl mt-3">Email Us At</p>
         <p className="text-white">rj@gravy.sg</p>

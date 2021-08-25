@@ -2,7 +2,11 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-     
+    extend: {
+      zIndex: {
+        "-10": "-10",
+      },
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -20,7 +24,7 @@ module.exports = {
         darkest: "#1f2d3d",
         dark: "#3c4858",
         DEFAULT: "#1a1a1a",
-        light: "#e0e6ed",
+        light: "#1f1f1f",
         lightest: "#f9fafc",
       },
       black: {
@@ -34,9 +38,8 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "footer-image": "url('./assets/1x/footer.jpg')",
-        "header": "url('./assets/1x/header.jpeg')",
+        header: "url('./assets/1x/header.jpeg')",
         "csr-background": "url('./assets/1x/footer.jpg')",
-
       }),
       fontFamily: {
         montserrat: ["Montserrat"],
@@ -51,6 +54,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [      require('@tailwindcss/forms'),
-],
+  plugins: [require("@tailwindcss/forms")],
 };

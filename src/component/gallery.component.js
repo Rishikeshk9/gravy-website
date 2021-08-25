@@ -28,72 +28,71 @@ import Image22 from "../assets/1x/gallery/22.jpg";
 
 export default function Example() {
   return (
-    <div className="grid grid-cols-2 bg-gravy">
-      
-      <div className=" p-5 py-3">
+    <div className="grid grid-cols-2  xl:grid-cols-6 xl:px-30 lg:grid-cols-5 lg:px-30  md:grid-cols-4 md:px-10 bg-gravy mt-10 py-20  ">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image11}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image12}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image13}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image14}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image15}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image16}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image17}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image18}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image19}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image20}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image21}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image22}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image1}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image2}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image3}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image6}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image5}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image4}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image7}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image8}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image9}></img>
       </div>
-      <div className=" p-5 py-3">
+      <div className=" p-5 py-3 self-center  ">
         <img className=" shadow-md rounded " alt="gallery" src={Image10}></img>
       </div>
     </div>

@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+.MuiPickersToolbar-toolbar {
+  background-color: #ba992f !important;
+}
+.MuiPickersClockPointer-thumb {
+  background-color: #fff !important;
+  border: 14px solid #ba992f !important;
+}
+.MuiPickersClockPointer-pointer {
+  background-color: #ba992f !important;
+}
+.MuiPickersClock-pin {
+  background-color: #ba992f !important;
+}
+.MuiPickersClockNumber-clockNumberSelected {
+}
+.MuiButton-label {
+  color: #ba992f !important;
+}
+.MuiPickersBasePicker-pickerView {
+  background-color: #1f1f1f !important;
+}
+
+.MuiDialogActions-root {
+  background-color: #1f1f1f !important;
+}
+
+.MuiInputBase-input {
+  color: #ba992f !important;
+}
+.MuiIconButton-label {
+  color: #ba992f !important;
+}
