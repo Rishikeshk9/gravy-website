@@ -44,9 +44,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "heroku-prebuild": "npm i -f",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject" 
   },
   "eslintConfig": {
     "extends": [
