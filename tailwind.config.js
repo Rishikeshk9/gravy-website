@@ -6,6 +6,24 @@ module.exports = {
       zIndex: {
         "-10": "-10",
       },
+      width: {
+        "9/10": "90%",
+      },
+      keyframes: {
+        "fade-in-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-in-down": "fade-in-down 0.5s ease-out",
+      },
     },
     colors: {
       transparent: "transparent",
@@ -37,9 +55,14 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "footer-image": "url('./assets/1x/footer.jpg')",
+        "footer-image": "url('./assets/1x/footer-alt.jpg')",
         header: "url('./assets/1x/header.jpeg')",
-        "csr-background": "url('./assets/1x/footer.jpg')",
+        menu: "url('./assets/1x/banner2.JPG')",
+        events: "url('./assets/1x/events.jpg')",
+        about: "url('./assets/1x/booking.JPG')",
+        main: "url('./assets/1x/banner.JPG')",
+
+        "csr-background": "url('./assets/1x/footer-alt.jpg')",
       }),
       fontFamily: {
         montserrat: ["Montserrat"],

@@ -22,6 +22,8 @@ import Booking from "./component/booking.component";
 
 import Footer from "./component/footer.component";
 import Footer_alt from "./component/footer-alt.component";
+import Footer_new from "./component/footer-new.component";
+
 import Switcher from "./component/switcher.component";
 
 // Add a request interceptor
@@ -175,6 +177,8 @@ ReactDOM.render(
 
     <Route path="/careers" exact component={() => <Career />} />
     <Route path="/contact" exact component={() => <Contact />} />
+    <Footer_new className="fixed bottom-0 z-0" />
+
     <Footer_alt className="fixed bottom-0 z-0" />
     <Footer className="fixed bottom-0 z-0" />
   </Router>,

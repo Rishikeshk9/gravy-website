@@ -19,6 +19,7 @@ import { useState } from "react";
 import React from "react";
 
 import { RadioGroup } from "@headlessui/react";
+import non_veg from "../assets/1x/icons/non-veg.svg";
 
 const Form = (props) => {
   const plans = [
@@ -48,15 +49,15 @@ const Form = (props) => {
   );
 
   return (
-    <div className="mx-auto  h-64">
-      <div className=" bg-gravy-light my-3  rounded-lg  px-5  text-center w-full flex">
+    <div className="mx-auto   px-5 h-max ">
+      <div className="  my-3 md:w-max  px-1  mx-auto  text-center w-80   ">
         {Object.values(props.subCategories["category"]).map((category, idx) => (
-          <div className="flex">
+          <div className="px-1 flex rounded-lg mx-auto border-2 bg-gravy border-gravy-light shadow-lg overflow-x-auto">
             <RadioGroup
               value={selectedSubCategory}
               onChange={setSelectedSubCategory}
             >
-              <div className="  flex">
+              <div className="  flex  ">
                 {category.subCategory.map((plan) => (
                   <RadioGroup.Option
                     key={plan.name}
@@ -65,16 +66,16 @@ const Form = (props) => {
                       `${active ? " " : ""}
                   ${
                     checked
-                      ? "  text-white bg-gravy_accent"
+                      ? "  text-white bg-gravy_accent shadow-lg"
                       : " text-white opacity-50"
                   }
-                    relative mx-3 rounded   my-1 p-2  cursor-pointer flex  `
+                    relative   rounded   my-1 p-2  cursor-pointer flex  `
                     }
                   >
                     {({ active, checked }) => (
                       <>
-                        <div className="flex items-center justify-between w-full">
-                          <div className="flex items-center">
+                        <div className=" items-center justify-between  ">
+                          <div className="  items-center overflow-x-auto whitespace-nowrap">
                             <div className="text-sm">
                               <RadioGroup.Label
                                 as="p"
@@ -83,6 +84,7 @@ const Form = (props) => {
                                 }`}
                               >
                                 {plan.name}
+
                                 {console.log(
                                   selectedSubCategory.subSubCategory
                                 )}
@@ -110,10 +112,11 @@ const Form = (props) => {
           </div>
         ))}
       </div>
-      <div className=" bg-gravy-light  rounded-lg  px-5 my-3 text-center w-full flex">
-        <div className="flex">
+      {/* 3rd category */}
+      <div className="    my-3 text-center w-full flex">
+        <div className="  px-1 lg:w-max w-80 mx-auto border-2 bg-gravy border-gravy-light shadow-lg rounded-lg">
           <RadioGroup value={selected} onChange={setSelected}>
-            <div className="  flex">
+            <div className="flex overflow-x-auto whitespace-nowrap">
               {selectedSubCategory.subSubCategory
                 ? selectedSubCategory.subSubCategory.map((plan) => (
                     <RadioGroup.Option
@@ -123,10 +126,10 @@ const Form = (props) => {
                         `${active ? " " : ""}
                   ${
                     checked
-                      ? "  text-white bg-gravy_accent"
+                      ? "  text-white bg-gravy_accent shadow-lg"
                       : " text-white opacity-50"
                   }
-                    relative mx-3 rounded  my-1 p-2   cursor-pointer flex  `
+                    relative   rounded  my-1 p-2   cursor-pointer flex  `
                       }
                     >
                       {({ active, checked }) => (
@@ -136,11 +139,20 @@ const Form = (props) => {
                               <div className="text-sm">
                                 <RadioGroup.Label
                                   as="p"
-                                  className={`font-medium  ${
+                                  className={`font-medium flex ${
                                     checked ? "text-white " : " "
                                   }`}
                                 >
                                   {plan.name}
+                                  {plan.non_veg ? (
+                                    <img
+                                      className=" ml-1 opacity-75 shadow  w-4  lg:max-h-96  "
+                                      alt="gallery"
+                                      src={non_veg}
+                                    ></img>
+                                  ) : (
+                                    ""
+                                  )}
                                 </RadioGroup.Label>
                                 <RadioGroup.Description
                                   as="span"
@@ -165,27 +177,55 @@ const Form = (props) => {
           </RadioGroup>
         </div>
       </div>
-
-      <div className=" bg-gravy-light mt-5  rounded-lg  px-5 py-2 mb-5 text-center w-full max-w-md mx-auto flex">
+      {/* Menu                   */}
+      <div className=" border-2  bg-gravy border-gravy-light shadow-lg flex p-4  mx-auto  rounded-lg    hover:scale-100 transform transition-all">
         {Object.values(props.subCategories["category"]).map((category, idx) => (
-          <div className="text-left ">
-            {selected.items
-              ? selected.items.map((item) => (
-                  <div className=" my-5">
-                    <div className="flex justify-between ">
-                      <p className="  text-gravy_accent font-semibold ">
-                        {item.name}
-                      </p>
-                      <p className="  text-gravy_accent font-semibold ">
-                        {item.price}
-                      </p>
-                    </div>
-                    <p className="  text-white opacity-50">
-                      {item.description}
+          <div className=" mx-auto ">
+            {selected.items ? (
+              selected.items.map((item) => (
+                <div className=" my-1 divide-y divide-white divide-opacity-25 ">
+                  <div className="flex justify-between  my-1 ">
+                    <p className="  text-gravy_accent font-semibold flex  justify-between">
+                      {item.name}
+                      {item.type ? (
+                        <p className="bg-gravy_accent shadow-lg rounded ml-2 mr-1 px-1 text-xs self-center   text-white">
+                          {item.type}
+                        </p>
+                      ) : (
+                        ""
+                      )}
+
+                      {item.spicy ? (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="mx-1 h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      ) : (
+                        ""
+                      )}
+                    </p>
+                    <p className="  text-gravy_accent font-semibold ">
+                      {item.price}
                     </p>
                   </div>
-                ))
-              : ""}
+                  <p className="  text-white opacity-50 mb-3">
+                    {item.description}
+                  </p>
+                </div>
+              ))
+            ) : (
+              <p className="  text-white opacity-50 font-sm self-center mx-auto text-center">
+                Select Category
+              </p>
+            )}
           </div>
         ))}
       </div>

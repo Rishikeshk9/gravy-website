@@ -7,10 +7,21 @@ import Image1 from "../assets/1x/Career picture.jpg";
 
 export default function Example() {
   return (
-    <div className="grid grid-cols-1 bg-gravy pb-10">
-      <div className="w-full lg:w-1/2 lg:mx-auto">
-        <img className=" shadow  " alt="gallery" src={Image1}></img>
-      </div>
+    <div className="grid grid-cols-1 bg-gravy pb-10  pt-24">
+      <Transition
+        as={Fragment}
+        show={true}
+        enter="transition ease-in-out duration-1000"
+        enterFrom=" opacity-0   translate-x-full"
+        enterTo=" opacity-100   translate-x-0"
+        leave="transition ease-in-out duration-1000"
+        leaveFrom=" opacity-100  translate-x-full"
+        leaveTo=" opacity-0 translate-x-0"
+      >
+        <div className="w-full lg:w-1/2 lg:mx-auto bg-gravy-light p-5   ">
+          <img className=" shadow-lg  " alt="gallery" src={Image1}></img>
+        </div>
+      </Transition>
 
       <div className="m-5 mt-10 lg:mx-96 lg:text-center ">
         <h1 className=" text-4xl font-bold text-gravy_accent">CAREERS</h1>

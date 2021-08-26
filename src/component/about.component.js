@@ -24,9 +24,9 @@ import Charity7 from "../assets/1x/charity/7.jpg";
 export default function Example() {
   return (
     <div className="grid grid-cols-1 bg-gravy pb-10">
-      <div className=" ">
+      <div className=" bg-about bg-cover bg-center bg-no-repeat">
         <img
-          className=" shadow lg:h-screen lg:w-screen"
+          className=" shadow lg:h-screen lg:w-screen opacity-0"
           alt="gallery"
           src={About}
         ></img>
