@@ -23,6 +23,7 @@
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "google-map-react": "^2.1.10",
+    "material-tabs": "^0.0.8",
     "multiselect-react-dropdown": "^2.0.5",
     "noty": "^3.2.0-beta-deprecated",
     "react": "^17.0.2",
@@ -44,7 +45,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject" 
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

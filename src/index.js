@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./component/navbar.component";
 import headerImage from "./assets/1x/header.jpeg";
 import Gallery from "./component/gallery.component";
+import Menu from "./component/Menu/menu.component";
+
 import Career from "./component/careers.component";
 import Contact from "./component/contact.component";
 import About from "./component/about.component";
@@ -20,6 +22,7 @@ import Booking from "./component/booking.component";
 
 import Footer from "./component/footer.component";
 import Footer_alt from "./component/footer-alt.component";
+import Switcher from "./component/switcher.component";
 
 // Add a request interceptor
 axios.interceptors.request.use(
@@ -162,6 +165,7 @@ ReactDOM.render(
     <Navbar />
     <Route path="/" exact component={() => <Home />} />
     <Route path="/about" exact component={() => <About />} />
+    <Route path="/menu" exact component={() => <Switcher />} />
 
     <Route path="/reservation" exact component={() => <Reservation />} />
     <Route path="/booking" exact component={() => <Booking />} />
