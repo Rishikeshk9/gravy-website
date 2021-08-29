@@ -166,6 +166,7 @@ ReactDOM.render(
   <Router>
     <Navbar />
     <Route path="/" exact component={() => <Home />} />
+<<<<<<< HEAD
     <Route
       path="/about"
       exact
@@ -190,6 +191,10 @@ ReactDOM.render(
         </>
       )}
     />
+=======
+    <Route path="/about" exact component={() => <About />} />
+    <Route path="/menu" exact component={() => <Switcher />} />
+>>>>>>> 21eaf913d652573b42b202d48d608c7b973c51a1
 
     <Route
       path="/reservation"
@@ -241,6 +246,7 @@ ReactDOM.render(
       )}
     />
 
+<<<<<<< HEAD
     <Route
       path="/careers"
       exact
@@ -265,6 +271,14 @@ ReactDOM.render(
         </>
       )}
     />
+=======
+    <Route path="/careers" exact component={() => <Career />} />
+    <Route path="/contact" exact component={() => <Contact />} />
+    <Footer_new className="fixed bottom-0 z-0" />
+
+    <Footer_alt className="fixed bottom-0 z-0" />
+    <Footer className="fixed bottom-0 z-0" />
+>>>>>>> 21eaf913d652573b42b202d48d608c7b973c51a1
   </Router>,
   document.getElementById("root")
 );
