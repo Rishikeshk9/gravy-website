@@ -2,33 +2,8 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-<<<<<<< HEAD
     fontFamily: {
       montserrat: ["Montserrat"],
-=======
-    extend: {
-      zIndex: {
-        "-10": "-10",
-      },
-      width: {
-        "9/10": "90%",
-      },
-      keyframes: {
-        "fade-in-down": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(-10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-      },
-      animation: {
-        "fade-in-down": "fade-in-down 0.5s ease-out",
-      },
->>>>>>> 21eaf913d652573b42b202d48d608c7b973c51a1
     },
     colors: {
       transparent: "transparent",

@@ -88,11 +88,7 @@ export default function Example() {
                       href="https://take.app/s/6591015824"
                       target="_blank"
                       rel="noreferrer"
-<<<<<<< HEAD
-                      className="p-2 rounded bg-gravy_accent text-white self-center font-semibold px-3"
-=======
-                      className="p-2 rounded bg-gravy_accent text-white self-center"
->>>>>>> 21eaf913d652573b42b202d48d608c7b973c51a1
+                      className="p-2 rounded bg-gravy_accent text-white self-center font-semibold px-3 hover:bg-"
                     >
                       {" "}
                       Book a Table
