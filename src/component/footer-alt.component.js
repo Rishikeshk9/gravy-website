@@ -21,7 +21,7 @@ export default function Example() {
   const history = useHistory();
 
   return (
-    <div className="bg-footer-image font-montserrat  font-normal	 bg-cover  p-5 ">
+    <div className="bg-footer-image font-montserrat  font-normal hidden	 bg-cover  p-5 ">
       <div className="h-90 grid grid-rows-4  mt-5 gap-4">
         <div className=" col-start-1 col-end-3">
           <img src={logo} alt="Gravy-Logo"></img>
@@ -29,7 +29,7 @@ export default function Example() {
         <div className=" col-start-4 col-end-6">
           <ul>
             <li>
-              <a href="/" className="text-gravy_accent">
+              <a href="/" className="text-gravy_accent font-semibold">
                 Home
               </a>
             </li>
@@ -83,16 +83,16 @@ export default function Example() {
             </svg>
             Gravy@
           </span>
-          <p className="text-gravy_accent">Tanjong Pagar</p>
+          <p className="text-gravy_accent font-semibold">Tanjong Pagar</p>
           <p className="text-white">1 Hoe Chiang Road</p>
           <p className="text-white">Singapore 437034</p>
         </div>
 
         <div className="col-start-4 col-end-6 row-start-3 ">
           <p>&nbsp;</p>
-          <p className="text-gravy_accent">info@gravy.sg</p>
+          <p className="text-gravy_accent font-semibold">info@gravy.sg</p>
           <p className="text-white">+65-9101-5824</p>
-          <p className="text-white">246 Tanjong KAtong</p>
+          <p className="text-white">246 Tanjong Katong</p>
         </div>
 
         <div className="col-start-1 col-end-3 row-start-4">
@@ -111,7 +111,7 @@ export default function Example() {
             </svg>
             Gravy@
           </span>
-          <p className="text-gravy_accent">Tanjong Katong</p>
+          <p className="text-gravy_accent font-semibold">Tanjong Katong</p>
           <p className="text-white">246 Tanjong Katong</p>
           <p className="text-white">Singapore 437034</p>
         </div>
@@ -119,7 +119,7 @@ export default function Example() {
         <div className="col-start-4 col-end-6 row-start-4">
           <p>&nbsp;</p>
 
-          <p className="text-gravy_accent">info@gravy.sg</p>
+          <p className="text-gravy_accent font-semibold">info@gravy.sg</p>
           <p className="text-white">+65-6909-7554</p>
           <p className="text-white">+65-91015824</p>
         </div>

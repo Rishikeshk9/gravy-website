@@ -1,0 +1,13 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+	<title>New Project</title>
+	<defs>
+		<image  width="800" height="800" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgAQMAAADhvpQrAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAGVJREFUeJztwTEBAAAAwqD1T20Gf6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4DDuvAAFA0yWHAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ff0000;stroke-width: 150 } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+	<path id="Shape 1" class="shp0" d="M49.16 49.16L750.84 49.16L750.84 750.84L49.16 750.84L49.16 49.16Z" />
+	<path id="Shape 2" class="shp0" d="M400.43 476.86C358.16 476.86 324 442.69 324 400.43C324 358.16 358.16 324 400.43 324C442.69 324 476.86 358.16 476.86 400.43C476.86 442.69 442.69 476.86 400.43 476.86Z" />
+</svg>

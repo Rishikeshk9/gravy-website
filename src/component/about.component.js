@@ -24,9 +24,9 @@ import Charity7 from "../assets/1x/charity/7.jpg";
 export default function Example() {
   return (
     <div className="grid grid-cols-1 bg-gravy pb-10">
-      <div className=" ">
+      <div className=" bg-about bg-cover bg-center bg-no-repeat">
         <img
-          className=" shadow lg:h-screen lg:w-screen"
+          className=" shadow lg:h-screen lg:w-screen opacity-0"
           alt="gallery"
           src={About}
         ></img>
@@ -67,7 +67,7 @@ export default function Example() {
 
         <div className="p-5 lg:w-2/3 self-center">
           <div className="bg-white p-5 relative bottom-5 lg:-left-5 lg:top-4  ">
-            <h3 className="text-4xl font-bold text-gravy_accent text-center">
+            <h3 className="text-4xl font-bold text-gravy_accent text-center font-montserrat">
               OUR CHEFS
             </h3>
             <p className="text-gravy  mt-5">
@@ -85,12 +85,12 @@ export default function Example() {
       {/* 
       visible only on large screens */}
       <div className="lg:block hidden lg:grid lg:grid-cols-2">
-        <div className="bg-white p-5 lg:w-2/3  lg:ml-auto col-span-1 shadow-lg">
+        <div className="bg-white p-5 lg:w-2/3  lg:ml-auto col-span-1 shadow-lg ">
           <img className="  shadow-lg " src={Chefs}></img>
         </div>
 
         <div className="p-5 lg:w-2/3 self-center">
-          <h3 className="text-5xl font-bold text-gravy_accent text-center">
+          <h3 className="text-5xl font-bold text-gravy_accent text-center ">
             <span className="text-white">OUR</span> CHEFS
           </h3>
           <div className="bg-white p-5 relative bottom-10 lg:-left-5 lg:top-4  ">
