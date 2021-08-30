@@ -4,16 +4,16 @@ import logo from "../assets/1x/gravy-logo.png";
 function IndexPage() {
   return (
     <>
-      <div className="   pb-12 bg-black">
-        <div className="lg:mx-auto pl-10  lg:items-center lg:justify-center container pt-10 lg:pt-20 flex flex-col ">
+      <div className="   pb-12 bg-footer md:bg-black bg-center bg-cover bg-no-repeat">
+        <div className="lg:mx-auto pl-10  md:items-center lg:justify-center container pt-10 lg:pt-20 flex flex-col ">
           <div>
             <img className="h-46 w-52" src={logo} alt="Gravy-Logo"></img>
           </div>
-          <div className="text-gravy_accent flex flex-col md:items-center f-f-l pt-3 font- bold">
-            <h1 className="text-2xl font-black">Eat. Drink. Relive.</h1>
-            <div className="md:flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
+          <div className="text-gravy_accent flex flex-col md:items-center f-f-l pt-3 ">
+            <h1 className="text-2xl font-bold">Eat. Drink. Relive.</h1>
+            <div className="md:flex items-center mt-5 md:mt-10 text-base text-color f-f-l font-semibold">
               <a
-                className=" md:mr-6 cursor-pointer flex hover:bg-gravy_accent rounded p-2 hover:text-white w-max"
+                className=" md:mr-6 cursor-pointer flex hover:bg-gravy_accent rounded p-2 hover:text-white w-max "
                 href="/reservation"
               >
                 Book a Table
@@ -30,7 +30,6 @@ function IndexPage() {
                   />
                 </svg>
               </a>
-              <br></br>
 
               <a
                 className="cursor-pointer flex hover:bg-gravy_accent rounded p-2 hover:text-white w-max"
@@ -51,7 +50,7 @@ function IndexPage() {
                 </svg>
               </a>
             </div>
-            <div className="my-6 text-base text-color f-f-l">
+            <div className="mt-1 mb-6 text-base text-color f-f-l font-semibold">
               <ul className="md:flex items-center ">
                 <li className=" md:mr-6 cursor-pointer   lg:py-0 hover:bg-gravy_accent rounded p-2 hover:text-white w-max">
                   <a href="/about">About</a>

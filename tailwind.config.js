@@ -62,6 +62,7 @@ module.exports = {
         events: "url('./assets/1x/events.jpg')",
         about: "url('./assets/1x/booking.JPG')",
         main: "url('./assets/1x/banner.JPG')",
+        footer: "url('./assets/1x/footer.jpg')",
 
         "csr-background": "url('./assets/1x/footer-alt.jpg')",
       }),

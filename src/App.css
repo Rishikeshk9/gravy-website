@@ -105,3 +105,9 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+li {
+  font-size: 14px;
+  margin-left: 10px;
+  list-style-type: circle;
+  display: list-item;
+}
