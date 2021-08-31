@@ -5,13 +5,17 @@ import ReactDOM from "react-dom";
 
 import "react-datepicker/dist/react-datepicker.css";
 import HotelList from "./Listbox/listbox.component";
+import { init } from "emailjs-com";
+import * as emailjs from "emailjs-com";
 
-import {
-  MuiPickersUtilsProvider,
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
+import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import Noty from "noty";
+import mojs from "@mojs/core";
+import "../../node_modules/noty/lib/noty.css";
+
+import "../../node_modules/noty/lib/themes/metroui.css";
+init("user_peVqxaJmK4V02dGueupc9");
 
 export default function Reservation() {
   const [startDate, setStartDate] = useState(new Date());
@@ -45,12 +49,146 @@ export default function Reservation() {
     },
   ];
   // The first commit of Material-UI
-  const [selectedDate, setSelectedDate] = React.useState(
-    new Date("2014-08-18T21:11:54")
+  const [selectedTime, setSelectedTime] = React.useState(
+    new Date().toLocaleTimeString()
   );
 
+  const handleTimeChange = (selectedTime) => {
+    setSelectedTime(selectedTime);
+    toSend.booking_time = selectedTime;
+  };
+
+  const [toSend, setToSend] = useState({
+    hotel_name: "Gravy Tanjong Katong",
+    user_name: "",
+    mob_number: "",
+    mail_id: "",
+    for_number: "",
+    booking_date: "",
+    unformatted_date: "",
+    request: "",
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_a0pxj6k",
+        "template_7i2stbc",
+        toSend,
+        "user_peVqxaJmK4V02dGueupc9"
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        Noty.closeAll();
+        new Noty({
+          type: "success",
+          text: "Your Reservation has been sent! Our Team will contact you for confirmation.",
+          theme: "metroui",
+          layout: "bottomRight",
+
+          animation: {
+            open: function (promise) {
+              var n = this;
+              var Timeline = new mojs.Timeline();
+              var body = new mojs.Html({
+                el: n.barDom,
+                x: { 500: 0, delay: 0, duration: 500, easing: "elastic.out" },
+                isForce3d: true,
+                onComplete: function () {
+                  promise(function (resolve) {
+                    resolve();
+                  });
+                },
+              });
+
+              var parent = new mojs.Shape({
+                parent: n.barDom,
+                width: 200,
+                height: n.barDom.getBoundingClientRect().height,
+                radius: 0,
+                x: { [150]: -150 },
+                duration: 1.2 * 500,
+                isShowStart: true,
+              });
+
+              n.barDom.style["overflow"] = "visible";
+              parent.el.style["overflow"] = "hidden";
+
+              var burst = new mojs.Burst({
+                parent: parent.el,
+                count: 10,
+                top: n.barDom.getBoundingClientRect().height + 75,
+                degree: 90,
+                radius: 75,
+                angle: { [-90]: 40 },
+                children: {
+                  fill: "#EBD761",
+                  delay: "stagger(500, -50)",
+                  radius: "rand(8, 25)",
+                  direction: -1,
+                  isSwirl: true,
+                },
+              });
+
+              var fadeBurst = new mojs.Burst({
+                parent: parent.el,
+                count: 2,
+                degree: 0,
+                angle: 75,
+                radius: { 0: 100 },
+                top: "90%",
+                children: {
+                  fill: "#EBD761",
+                  pathScale: [0.65, 1],
+                  radius: "rand(12, 15)",
+                  direction: [-1, 1],
+                  delay: 0.8 * 500,
+                  isSwirl: true,
+                },
+              });
+
+              Timeline.add(body, burst, fadeBurst, parent);
+              Timeline.play();
+            },
+            close: function (promise) {
+              var n = this;
+              new mojs.Html({
+                el: n.barDom,
+                x: { 0: 500, delay: 10, duration: 500, easing: "cubic.out" },
+                skewY: { 0: 10, delay: 10, duration: 500, easing: "cubic.out" },
+                isForce3d: true,
+                onComplete: function () {
+                  promise(function (resolve) {
+                    resolve();
+                  });
+                },
+              }).play();
+            },
+          },
+        }).show();
+        console.log("Posted Successfully");
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+  };
+  const [selectValue, setSelectValue] = useState("Gravy Tanjong Katong");
+
+  // const handleChange = (e) => {
+  //   setSelectValue({ selectValue: e.target.value });
+  // };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+    console.log(toSend);
+  };
+
   const handleDateChange = (date) => {
-    setSelectedDate(date);
+    toSend.unformatted_date = date;
+    date = date.toLocaleDateString() + " " + date.toLocaleTimeString();
+    console.log(date);
+    toSend.booking_date = date;
   };
   return (
     <>
@@ -62,47 +200,79 @@ export default function Reservation() {
             </h1>
           </div>
         </div>
-        <form action="#" method="POST">
+        <form action="#" method="POST" onSubmit={onSubmit}>
           <div className="grid  grid-flow-row grid-cols-2   gap-6 px-5">
             <div className="col-span-2 flex mx-auto  ">
               <p className="text-white text-left self-center   mr-5 opacity-50">
                 Select Hotel
               </p>
 
-              <HotelList
+              <select
+                name="hotel_name"
+                defaultValue={selectValue}
+                onChange={handleChange}
+                className="bg-gravy text-gravy_accent relative w-full   border-2 border-gravy-light shadow-lg rounded-md   pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent sm:text-sm"
+              >
+                <option value="Gravy Tanjong Katong">
+                  Gravy Tanjong Katong
+                </option>
+                <option value="Gravy Tanjong Pagar">Gravy Tanjong Pagar</option>
+              </select>
+              {/* <HotelList
+                className="hidden "
                 items={hotels}
                 selected={{ id: 2, name: "Gravy Tanjong Pagar" }}
-              />
+              /> */}
             </div>
-            <div className="col-span-2  ">
-              <p className="text-white mt-3 opacity-50">For</p>
-              <HotelList className="" items={people} />
-            </div>
+            <div className="col-span-2  "></div>
             <div className="col-span-2  ">
               <div className="grid grid-cols-2 grid-flow-row gap-6 ">
                 <div className="col-span-1  ">
                   <p className="text-white mt-3 opacity-50">When</p>
-                  <DatePicker
+                  {/* <DatePicker
+                    name="booking_date"
                     className=" w-full bg-gravy text-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent"
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
-                  />
+                  /> */}
+                  <MuiPickersUtilsProvider
+                    className="bg-gravy   text-gravy_accent border-2  rounded-md shadow-lg    focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent"
+                    utils={DateFnsUtils}
+                  >
+                    <DateTimePicker
+                      className="  bg-gravy text-gravy_accent border-2  rounded-md shadow-lg  focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent"
+                      value={toSend.unformatted_date}
+                      format="hh:mm dd/MM/yyyy"
+                      autoOk
+                      invalidDateMessage={false}
+                      onChange={handleDateChange}
+                      ampm={false}
+                      name="booking_date"
+                      minDate={new Date().setHours(new Date().getHours() + 1)}
+                    />
+                  </MuiPickersUtilsProvider>
                 </div>
                 <div className="col-span-1  ">
-                  <p className="text-white mt-3 opacity-50">At</p>
-                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                    <div className=" p-1 px-3 w-full bg-gravy text-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent">
-                      <KeyboardTimePicker
-                        className="bg-gravy text-gravy_accent border-2"
-                        id="time-picker"
-                        value={selectedDate}
-                        onChange={handleDateChange}
-                        KeyboardButtonProps={{
-                          "aria-label": "change time",
-                        }}
-                      />
-                    </div>
-                  </MuiPickersUtilsProvider>
+                  <p className="text-white mt-3 opacity-50">For</p>
+                  {/* <HotelList className="" items={people} /> */}
+
+                  <select
+                    name="for_number"
+                    defaultValue={selectValue}
+                    onChange={handleChange}
+                    className="bg-gravy text-gravy_accent relative w-full   border-2 border-gravy-light shadow-lg rounded-md   pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent sm:text-sm"
+                  >
+                    <option value="1 Adult">1 Adult</option>
+                    <option value="1 Adults">2 Adult</option>{" "}
+                    <option value="3 Adults">3 Adult</option>{" "}
+                    <option value="4 Adults">4 Adult</option>{" "}
+                    <option value="5 Adults">5 Adult</option>{" "}
+                    <option value="6 Adults">6 Adult</option>{" "}
+                    <option value="7 Adults">7 Adult</option>{" "}
+                    <option value="8 Adults">8 Adult</option>{" "}
+                    <option value="9 Adults">9 Adult</option>{" "}
+                    <option value="10 Adults">10 Adult</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -111,39 +281,43 @@ export default function Reservation() {
               <p className="text-white mt-3   opacity-50">Personal Details</p>
               <input
                 type="text"
-                name="name"
+                name="user_name"
                 id="name"
                 placeholder="Your Full Name"
                 autoComplete="name"
+                onChange={handleChange}
                 className="mt-1 text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:border-gravy_accent block w-full shadow-sm sm:text-sm border-gray-300  "
               />
             </div>
             <div className="col-span-2">
               <input
                 type="text"
-                name="mobile"
+                name="mob_number"
                 id="mobile"
                 placeholder="Mobile Number"
                 autoComplete="tel"
+                onChange={handleChange}
                 className="mt-1 text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:border-gravy_accent block w-full shadow-sm sm:text-sm border-gray-300  "
               />
             </div>
             <div className="col-span-2">
               <input
                 type="text"
-                name="mail"
+                name="mail_id"
                 id="mail"
                 placeholder="Mail ID"
                 autoComplete="email"
+                onChange={handleChange}
                 className="mt-1 text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:border-gravy_accent block w-full shadow-sm sm:text-sm border-gray-300  "
               />
             </div>
             <div className="col-span-2">
               <div className="mt-1">
                 <textarea
-                  id="about"
-                  name="about"
+                  id="request"
+                  name="request"
                   rows={3}
+                  onChange={handleChange}
                   className="rounded text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg focus:border-gravy_accent mt-1 block w-full sm:text-sm  "
                   placeholder="Your Special Request"
                   defaultValue={""}

@@ -32,7 +32,7 @@ export default function Example() {
               <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}{" "}
                 <a
-                  href="https://take.app/s/6591015824"
+                  href="/reservation"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2 rounded bg-gravy_accent text-white self-center mr-3 shadow-md"

@@ -47,8 +47,7 @@ export default function Example() {
               <div className="self-center">
                 <p className="text-white my-3 ">
                   <div className="flex justify-between mx-10 self-center">
-                    <p className="font-bold "> Monday</p>{" "}
-                    <p> 11:30AM - 10:00PM</p>
+                    <p className="font-bold "> Monday</p> <p>Closed</p>
                   </div>
                   <div className="flex justify-between mx-10 self-center">
                     <p className="font-bold "> Tuesday</p>{" "}

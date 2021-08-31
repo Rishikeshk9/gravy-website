@@ -69,6 +69,16 @@
   color: #ba992f !important;
 }
 
+.MuiPickerDTTabs-tabs {
+  background-color: #1f1f1f !important;
+}
+
+.MuiFormControl-root {
+  border: 2px solid #1f1f1f !important;
+}
+.MuiInput-underline:after {
+  border-bottom: 2px solid #ba992f !important;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
