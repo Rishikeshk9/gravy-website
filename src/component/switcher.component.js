@@ -830,14 +830,14 @@ export default function Switcher() {
                   name: "Belgo Craft Brewery",
                   items: [
                     {
-                      name: "IPA",
+                      name: "IPA 12",
                       description: "BELGIUM, 4.9%",
-                      price: "12/14",
+                      price: "14",
                     },
                     {
-                      name: "Amber",
+                      name: "Amber 12",
                       description: "BELGIUM, 5.1%",
-                      price: "12/14",
+                      price: "14",
                     },
                   ],
                 },
@@ -845,7 +845,7 @@ export default function Switcher() {
                   name: "Other Beers",
                   items: [
                     {
-                      name: "Heineken",
+                      name: "Heineken ",
                       description: "Lager, Netherlands, 5%",
                       price: "10/12",
                     },
@@ -875,9 +875,9 @@ export default function Switcher() {
                       price: "110",
                     },
                     {
-                      name: "Chivas Regal",
+                      name: "Chivas Regal 12",
                       description: "Blended, Scotland, 40%",
-                      price: "12/110",
+                      price: "110",
                     },
                     {
                       name: "Monkey Shoulder",
@@ -885,14 +885,14 @@ export default function Switcher() {
                       price: "120",
                     },
                     {
-                      name: "Singleton",
+                      name: "Singleton 12",
                       description: "Speyside, Scotland, 43%",
-                      price: "12/120",
+                      price: "120",
                     },
                     {
-                      name: "Glenfiddich",
+                      name: "Glenfiddich 12",
                       description: "Speyside, 40%",
-                      price: "12/130",
+                      price: "130",
                     },
                     {
                       name: "Amrut Fusion",
@@ -988,7 +988,7 @@ export default function Switcher() {
                     {
                       name: "Hibiki",
                       description: "Japan, 43%",
-                      price: "130",
+                      price: "17",
                     },
                     {
                       name: "Nikka Coffee Grain",
@@ -1016,9 +1016,9 @@ export default function Switcher() {
                       price: "17",
                     },
                     {
-                      name: "Redbeast",
+                      name: "Redbeast 15",
                       description: "Ireland, 46%",
-                      price: "15/16",
+                      price: "16",
                     },
                     {
                       name: "Teeling Small Batch",
@@ -1026,30 +1026,30 @@ export default function Switcher() {
                       price: "14",
                     },
                     {
-                      name: "Macallan Sherry",
+                      name: "Macallan Sherry 12",
                       description: "Speyside, Scotland, 40%",
-                      price: "12/14",
+                      price: "14",
                     },
                     {
-                      name: "Glenfarclas",
+                      name: "Glenfarclas 15",
                       description: "Speyside, Scotland, 46%",
-                      price: "15/19",
+                      price: "19",
                     },
                     {
                       name: "Glenlivet",
                       description: "Speyside, Scotland, 40%",
-                      price: "18/26",
+                      price: "26",
                       type: "2nd place - Best Single Malt Scotch 18 year old",
                     },
                     {
-                      name: "Balblair",
+                      name: "Balblair 15",
                       description: "Highland, Scotland, 46%",
-                      price: "15/19",
+                      price: "19",
                     },
                     {
-                      name: "Aucentoshan",
+                      name: "Aucentoshan 12",
                       description: "Lowland, Scotland, 46%",
-                      price: "12/14",
+                      price: "14",
                     },
                     {
                       name: "Longrow Peated",
@@ -1057,35 +1057,35 @@ export default function Switcher() {
                       price: "17",
                     },
                     {
-                      name: "Hazelburn",
+                      name: "Hazelburn 10",
                       description: "Campbeltown, Scotland, 46%",
-                      price: "10/17",
+                      price: "17",
                     },
                     {
-                      name: "Talisker",
+                      name: "Talisker 10",
                       description: "Islay, Scotland, 45.8%",
-                      price: "10/14",
+                      price: "14",
                     },
                     {
                       name: "Ardbeg Uigeadail",
                       description: "Islay, Scotland, 54.2%",
-                      price: "17",
+                      price: "18",
                       type: "2021 whisky of the year",
                     },
                     {
-                      name: "Lagavulin",
+                      name: "Lagavulin 16",
                       description: "Islay, Scotland, 46%",
-                      price: "16/18",
+                      price: "18",
                     },
                     {
-                      name: "Bunnahabain Moine",
+                      name: "Bunnahabain Moine 11",
                       description: "Islay, Scotland, 48%",
-                      price: "11/25",
+                      price: "25",
                     },
                     {
-                      name: "Port Charlotte",
+                      name: "Port Charlotte 10",
                       description: "Islay, Scotland, 50%",
-                      price: "10/15",
+                      price: "15",
                     },
                   ],
                 },
@@ -1101,12 +1101,12 @@ export default function Switcher() {
                     {
                       name: "Jin Jiji Darjeeling",
                       description: "Craft Gin, India, 43%",
-                      price: "",
+                      price: "15",
                     },
                     {
                       name: "Jin Jiji India Dry Gin",
                       description: "Craft Gin, India, 43%",
-                      price: "",
+                      price: "15",
                     },
                     {
                       name: "Hendricks",
