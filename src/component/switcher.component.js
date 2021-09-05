@@ -1337,7 +1337,7 @@ export default function Switcher() {
             name: "Whisky",
             subSubCategory: [
               {
-                name: "Food Veg",
+                name: "Veg Pairing",
                 items: [
                   {
                     name: "Jaisalmer Gin",
@@ -1367,7 +1367,7 @@ export default function Switcher() {
                 ],
               },
               {
-                name: "Food Non-Veg",
+                name: "Non-Veg Pairing",
                 non_veg: true,
                 items: [
                   {
@@ -1403,7 +1403,7 @@ export default function Switcher() {
             name: "Wine",
             subSubCategory: [
               {
-                name: "Food Veg",
+                name: "Veg Pairing",
                 items: [
                   {
                     name: "Tandoori Soya Chaap with Majestic Rose",
@@ -1429,7 +1429,7 @@ export default function Switcher() {
                 ],
               },
               {
-                name: "Food Non-Veg",
+                name: "Non-Veg Pairing",
                 non_veg: true,
                 items: [
                   {
@@ -1461,7 +1461,7 @@ export default function Switcher() {
             name: "Belgo Craft Brewery",
             subSubCategory: [
               {
-                name: "Food Veg",
+                name: "Veg Pairing",
                 items: [
                   {
                     name: "Blonde with Achari Mushroom                     ",
@@ -1487,7 +1487,7 @@ export default function Switcher() {
                 ],
               },
               {
-                name: "Food Non-Veg",
+                name: "Non-Veg Pairing",
                 non_veg: true,
                 items: [
                   {
@@ -1532,7 +1532,42 @@ export default function Switcher() {
                 name: "MON",
                 items: [
                   {
-                    name: "Gluten-Free Chapati. Stir-Fried Palak/Egg Bhurji. Chole Curry/Fish Curry. Cashews. Kurkure. Salad. Sattu Protein Shake",
+                    name: "Gluten-Free Chapati ",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: " Stir-Fried Palak/Egg Bhurji ",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: " Chole Curry/Fish Curry ",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: " Cashews",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Kurkure",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Salad",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Sattu",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Protein Shake",
                     description: "",
                     price: "",
                   },
@@ -1543,7 +1578,37 @@ export default function Switcher() {
 
                 items: [
                   {
-                    name: "Sameza Jeera Rice. Tandoori Soya Chaap/Achari Chicken Tikka. Paneer Tikka?Murgh Malai. Khakra. Mint Chutney. Salad. Ragi & Banana Smoothie",
+                    name: "Sameza Jeera",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Tandoori Soya Chaap/Achari Chicken Tikka",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Paneer Tikka/Murgh Malai",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Khakra",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Mint Chutney",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Salad",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Ragi & Banana Smoothie",
                     description: "",
                     price: "",
                   },
@@ -1554,7 +1619,37 @@ export default function Switcher() {
 
                 items: [
                   {
-                    name: "Oats Upma. Rajma Masala/Homemade Chicken Curry. Aloo Jeera/Egg White Omellete. Peanuts. Tapioca Crisps. Slad. Haldi Doodh",
+                    name: "Oats Upma",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Rajma Masala/Homemade Chicken Curry",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Aloo Jeera/Egg White Omellete",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Peanuts",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Tapioca Crisps",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Salad",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Haldi Doodh",
                     description: "",
                     price: "",
                   },
@@ -1565,7 +1660,37 @@ export default function Switcher() {
 
                 items: [
                   {
-                    name: "Sameza Khichdi. Tandoori Broccoli/Lasooni Jhinga. Stir-Fried Bhindi?Haryali Chicken Tikka. Walnuts. Lijjat Papad. Salad. Thai Tender Coconut",
+                    name: "Sameza Khichdi",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Tandoori Broccoli/Lasooni Jhinga",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Stir-Fried Bhindi/Haryali Chicken Tikka",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Walnuts",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Lijjat Papad",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Salad",
+                    description: "",
+                    price: "",
+                  },
+                  {
+                    name: "Thai Tender Coconut",
                     description: "",
                     price: "",
                   },

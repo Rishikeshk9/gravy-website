@@ -85,8 +85,7 @@ export default function Example() {
                       </a>
                     ))}
                     <a
-                      href="https://take.app/s/6591015824"
-                      target="_blank"
+                      href="/reservation"
                       rel="noreferrer"
                       className="p-2 rounded bg-gravy_accent text-white self-center font-semibold px-3 hover:bg-"
                     >

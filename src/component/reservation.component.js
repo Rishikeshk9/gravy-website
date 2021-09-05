@@ -19,35 +19,7 @@ init("user_peVqxaJmK4V02dGueupc9");
 
 export default function Reservation() {
   const [startDate, setStartDate] = useState(new Date());
-  const hotels = [
-    {
-      id: 1,
-      name: "Gravy Tanjong Katong",
-    },
-    {
-      id: 2,
-      name: "Gravy Tanjong Pagar",
-    },
-  ];
 
-  const people = [
-    {
-      id: 1,
-      name: "1 Adult",
-    },
-    {
-      id: 2,
-      name: "2 Adults",
-    },
-    {
-      id: 2,
-      name: "3 Adults",
-    },
-    {
-      id: 2,
-      name: "4 Adults",
-    },
-  ];
   // The first commit of Material-UI
   const [selectedTime, setSelectedTime] = React.useState(
     new Date().toLocaleTimeString()
@@ -59,7 +31,7 @@ export default function Reservation() {
   };
 
   const [toSend, setToSend] = useState({
-    hotel_name: "Gravy Tanjong Katong",
+    hotel_name: "",
     user_name: "",
     mob_number: "",
     mail_id: "",
@@ -173,15 +145,15 @@ export default function Reservation() {
         console.log("FAILED...", err);
       });
   };
-  const [selectValue, setSelectValue] = useState("Gravy Tanjong Katong");
+  const [selectValue, setSelectValue] = useState("");
 
   // const handleChange = (e) => {
   //   setSelectValue({ selectValue: e.target.value });
   // };
 
   const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
     console.log(toSend);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const handleDateChange = (date) => {
@@ -203,16 +175,19 @@ export default function Reservation() {
         <form action="#" method="POST" onSubmit={onSubmit}>
           <div className="grid  grid-flow-row grid-cols-2   gap-6 px-5">
             <div className="col-span-2 flex mx-auto  ">
-              <p className="text-white text-left self-center   mr-5 opacity-50">
+              <p className="text-white text-left self-center   mr-5 opacity-50  whitespace-nowrap">
                 Select Hotel
               </p>
 
               <select
                 name="hotel_name"
-                defaultValue={selectValue}
                 onChange={handleChange}
+                required
                 className="bg-gravy text-gravy_accent relative w-full   border-2 border-gravy-light shadow-lg rounded-md   pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent sm:text-sm"
               >
+                <option value="" selected disabled>
+                  Select Outlet
+                </option>
                 <option value="Gravy Tanjong Katong">
                   Gravy Tanjong Katong
                 </option>
@@ -244,6 +219,7 @@ export default function Reservation() {
                       value={toSend.unformatted_date}
                       format="hh:mm dd/MM/yyyy"
                       autoOk
+                      required
                       invalidDateMessage={false}
                       onChange={handleDateChange}
                       ampm={false}
@@ -258,20 +234,23 @@ export default function Reservation() {
 
                   <select
                     name="for_number"
-                    defaultValue={selectValue}
                     onChange={handleChange}
+                    required
                     className="bg-gravy text-gravy_accent relative w-full   border-2 border-gravy-light shadow-lg rounded-md   pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-gravy_accent focus:border-gravy_accent sm:text-sm"
                   >
+                    <option value="" selected disabled>
+                      Select Visitors
+                    </option>
                     <option value="1 Adult">1 Adult</option>
-                    <option value="1 Adults">2 Adult</option>{" "}
-                    <option value="3 Adults">3 Adult</option>{" "}
-                    <option value="4 Adults">4 Adult</option>{" "}
-                    <option value="5 Adults">5 Adult</option>{" "}
-                    <option value="6 Adults">6 Adult</option>{" "}
-                    <option value="7 Adults">7 Adult</option>{" "}
-                    <option value="8 Adults">8 Adult</option>{" "}
-                    <option value="9 Adults">9 Adult</option>{" "}
-                    <option value="10 Adults">10 Adult</option>
+                    <option value="1 Adults">2 Adults</option>{" "}
+                    <option value="3 Adults">3 Adults</option>{" "}
+                    <option value="4 Adults">4 Adults</option>{" "}
+                    <option value="5 Adults">5 Adults</option>{" "}
+                    <option value="6 Adults">6 Adults</option>{" "}
+                    <option value="7 Adults">7 Adults</option>{" "}
+                    <option value="8 Adults">8 Adults</option>{" "}
+                    <option value="9 Adults">9 Adults</option>{" "}
+                    <option value="10 Adults">10 Adults</option>
                   </select>
                 </div>
               </div>
@@ -286,6 +265,7 @@ export default function Reservation() {
                 placeholder="Your Full Name"
                 autoComplete="name"
                 onChange={handleChange}
+                required
                 className="mt-1 text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:border-gravy_accent block w-full shadow-sm sm:text-sm border-gray-300  "
               />
             </div>
@@ -297,6 +277,7 @@ export default function Reservation() {
                 placeholder="Mobile Number"
                 autoComplete="tel"
                 onChange={handleChange}
+                required
                 className="mt-1 text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:border-gravy_accent block w-full shadow-sm sm:text-sm border-gray-300  "
               />
             </div>
@@ -308,6 +289,7 @@ export default function Reservation() {
                 placeholder="Mail ID"
                 autoComplete="email"
                 onChange={handleChange}
+                required
                 className="mt-1 text-gravy_accent placeholder-current bg-gravy focus:ring-gravy_accent border-2 border-gravy-light shadow-lg rounded focus:border-gravy_accent block w-full shadow-sm sm:text-sm border-gray-300  "
               />
             </div>

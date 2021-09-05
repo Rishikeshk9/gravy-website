@@ -20,22 +20,24 @@ import Charity4 from "../assets/1x/charity/4.jpg";
 import Charity5 from "../assets/1x/charity/5.jpg";
 import Charity6 from "../assets/1x/charity/6.jpg";
 import Charity7 from "../assets/1x/charity/7.jpg";
+import headerImage2 from "../assets/1x/banner.JPG";
 
 export default function Example() {
   return (
     <div className="grid grid-cols-1 bg-gravy pb-10">
-      <div className=" bg-about bg-cover bg-center bg-no-repeat">
+      <div className="lg:block hidden bg-main bg-cover bg-center bg-no-repeat opacity-50">
         <img
-          className=" shadow lg:h-screen lg:w-screen opacity-0"
+          className="  shadow lg:h-screen lg:w-screen opacity-0"
           alt="gallery"
-          src={About}
+          src={headerImage2}
         ></img>
       </div>
+
       <h1 className=" text-6xl font-bold text-gravy_accent hidden lg:block text-center mt-10">
         <span className="text-white">ABOUT</span> US
       </h1>
 
-      <div className="m-5   lg:grid lg:grid-cols-2 ">
+      <div className="m-5 mt-28 lg:mt-0  lg:grid lg:grid-cols-2 ">
         <img
           className="col-span-1 lg:h-2/3 lg:ml-auto self-center  shadow-lg "
           src={Dish}
@@ -52,7 +54,7 @@ export default function Example() {
           to lose one”. <br />
           <br /> We take both positive and negative feedback very seriously and
           try our best to put our feet in the shoes of our customers. We value
-          long-lasting relationships far greater than short term cash inflows,
+          longlasting relationships far greater than short term cash inflows,
           and the fact that over 70% of our customers are regulars testify to
           that. At the bottom of it all, we’re just a bunch of down-to-earth
           friendly people trying to serve out delicious food. Come down, try our
@@ -75,7 +77,7 @@ export default function Example() {
               very essence of our team of chefs.. Coming from some of the best
               restaurants in India, they bring their flavours across the pond
               into Singapore. To cook many of our dishes, we use large cooking
-              pots. Our team of chefs (headed up by Satyendra Singh) slow-cook
+              pots. Our team of chefs (headed up by Satyendra Singh) slowcook
               our sauces sometimes for as long as six hours. They season and
               taste every dish to make sure the flavour is just right.
             </p>
@@ -122,7 +124,7 @@ export default function Example() {
               that all our customers are carefully attended to and satisfied
               with their service. This is no mean feat, especially on days when
               we pack out the restaurant in under 20 minutes. Our very own
-              super-team.
+              superteam.
             </p>
           </div>
         </div>
@@ -167,9 +169,9 @@ only visible on Large Screens */}
 
             <p className="text-white  my-5">
               Born and bred in Singapore, Rohit never spent much time in the
-              kitchen grow- ing up. Rather, he learned the importance of
+              kitchen growing up. Rather, he learned the importance of
               hospitality through his folks who loved cooking and frequently
-              hosted family & friends at home, and an entre- preneurial spirit
+              hosted family & friends at home, and an entrepreneurial spirit
               through his small business ventures while he was in school. <br />{" "}
               Rohit's main role is to direct and control all business
               operations. He is responsible for giving strategic guidance and
@@ -189,13 +191,13 @@ only visible on Large Screens */}
 
             <p className="text-white  my-5 pb-10">
               Our hustler in chief. Hailing from a small town in Bihar, Northern
-              India, he’s come a long way, originally from a Non-English back-
-              ground and humble beginnings. This industrious entrepreneur has
-              worked his way up from his time as a bell boy as well as serving
-              cus- tomers for long hours in a food court to save up the money to
-              open his own restaurant in a foreign country. He handles all
-              things finance and manages staffing, quality control across our
-              restaurants.
+              India, he’s come a long way, originally from a Non-English
+              background and humble beginnings. This industrious entrepreneur
+              has worked his way up from his time as a bell boy as well as
+              serving customers for long hours in a food court to save up the
+              money to open his own restaurant in a foreign country. He handles
+              all things finance and manages staffing, quality control across
+              our restaurants.
             </p>
           </div>
         </div>
@@ -209,15 +211,15 @@ only visible on Large Screens */}
         <p className="text-gravy text-center my-5 p-5">
           Gravy is committed to thinking beyond just our restaurant and giving
           back to the community. We seek out parternships with NGOs and local
-          charitable organiza- tions whose mission align with our vision.
-          Donation Requests? Please email rj@gravy.sg Our charitable giving and
-          community investment is focused at the moment to a few areas that
-          connect most with us all, including alleviating hunder, financial as-
-          sistance and generating awareness of local community poverty.
-          Unfortunately, we may not be able to support every cause due to the
-          limit in our own resources even though we may fully believe in your
-          mission. Thank you for thinking of Gravy as a partner who can make a
-          positive impact on your cause.
+          charitable organizations whose mission align with our vision. Donation
+          Requests? Please email rj@gravy.sg Our charitable giving and community
+          investment is focused at the moment to a few areas that connect most
+          with us all, including alleviating hunder, financial assistance and
+          generating awareness of local community poverty. Unfortunately, we may
+          not be able to support every cause due to the limit in our own
+          resources even though we may fully believe in your mission. Thank you
+          for thinking of Gravy as a partner who can make a positive impact on
+          your cause.
         </p>
       </div>
 
@@ -233,9 +235,9 @@ only visible on Large Screens */}
               10,000 Meals
             </h3>
             <p className="text-white lg:mr-5">
-              Participants in "Feed the City" initiative by Food- bank
-              Singapore. Contributing over 10,000 meals over 1 month during the
-              Circuit Breaker period in 2020.
+              Participants in "Feed the City" initiative by Food Bank Singapore.
+              Contributing over 10,000 meals over 1 month during the Circuit
+              Breaker period in 2020.
             </p>
           </div>
         </div>

@@ -165,7 +165,16 @@ axios.interceptors.response.use(
 ReactDOM.render(
   <Router>
     <Navbar />
-    <Route path="/" exact component={() => <Home />} />
+    <Route
+      path="/"
+      exact
+      component={() => (
+        <>
+          {" "}
+          <Home /> <Footer className="fixed bottom-0 z-0" />{" "}
+        </>
+      )}
+    />
     <Route
       path="/about"
       exact
@@ -184,9 +193,6 @@ ReactDOM.render(
       component={() => (
         <>
           <Switcher />
-          <Footer_new className="fixed bottom-0 z-0" />
-          <Footer_alt className="fixed bottom-0 z-0" />
-          <Footer className="fixed bottom-0 z-0" />
         </>
       )}
     />

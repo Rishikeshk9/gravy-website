@@ -22,27 +22,6 @@ import { RadioGroup } from "@headlessui/react";
 import non_veg from "../assets/1x/icons/non-veg.svg";
 
 const Form = (props) => {
-  const plans = [
-    {
-      name: "Sstup",
-      ram: "12GB",
-      cpus: "6 CPUs",
-      disk: "160 GB SSD disk",
-    },
-    {
-      name: "Business",
-      ram: "16GB",
-      cpus: "8 CPUs",
-      disk: "512 GB SSD disk",
-    },
-    {
-      name: "Enterprise",
-      ram: "32GB",
-      cpus: "12 CPUs",
-      disk: "1024 GB SSD disk",
-    },
-  ];
-
   const [selected, setSelected] = useState(props.subCategories);
   const [selectedSubCategory, setSelectedSubCategory] = useState(
     props.subCategories
@@ -114,7 +93,7 @@ const Form = (props) => {
       </div>
       {/* 3rd category */}
       <div className="    my-3 text-center w-full flex">
-        <div className="  px-1 lg:w-max w-80 mx-auto border-2 bg-gravy border-gravy-light shadow-lg rounded-lg">
+        <div className="  px-1 w-80 lg:w-max  mx-auto border-2 bg-gravy border-gravy-light shadow-lg rounded-lg">
           <RadioGroup value={selected} onChange={setSelected}>
             <div className="flex overflow-x-auto whitespace-nowrap">
               {selectedSubCategory.subSubCategory
@@ -178,14 +157,14 @@ const Form = (props) => {
         </div>
       </div>
       {/* Menu                   */}
-      <div className=" border-2  bg-gravy border-gravy-light shadow-lg flex p-4  mx-auto  rounded-lg    hover:scale-100 transform transition-all">
+      <div className=" border-2  w-80 lg:w-max bg-gravy border-gravy-light shadow-lg flex p-4  mx-auto  rounded-lg    hover:scale-100 transform transition-all">
         {Object.values(props.subCategories["category"]).map((category, idx) => (
-          <div className=" mx-auto ">
+          <div className=" mx-auto  w-full">
             {selected.items ? (
               selected.items.map((item) => (
-                <div className=" my-1 divide-y divide-white divide-opacity-25 ">
+                <div className=" my-1 divide-y divide-white divide-opacity-25   ">
                   <div className="flex justify-between  my-1 ">
-                    <p className="  text-gravy_accent font-semibold flex  justify-between">
+                    <p className="  text-gravy_accent font-semibold flex    justify-between">
                       {item.name}
                       {item.type ? (
                         <p className="bg-gravy_accent shadow-lg rounded ml-2 mr-1 px-1 text-xs self-center   text-white">
@@ -212,6 +191,7 @@ const Form = (props) => {
                         ""
                       )}
                     </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <p className="  text-gravy_accent font-semibold ">
                       {item.price}
                     </p>
@@ -223,7 +203,7 @@ const Form = (props) => {
               ))
             ) : (
               <p className="  text-white opacity-50 font-sm self-center mx-auto text-center">
-                Select Category
+                Select any of the above Categories
               </p>
             )}
           </div>
