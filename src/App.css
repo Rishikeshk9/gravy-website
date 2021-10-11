@@ -68,7 +68,15 @@
 .MuiIconButton-label {
   color: #ba992f !important;
 }
-
+.MuiPickersClockNumber-clockNumber {
+  color: #fff !important;
+}
+.MuiTypography-body1 {
+  color: #fff !important;
+}
+.MuiPickersCalendarHeader-dayLabel {
+  color: #fff !important;
+}
 .MuiPickerDTTabs-tabs {
   background-color: #1f1f1f !important;
 }

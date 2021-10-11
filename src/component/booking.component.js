@@ -43,35 +43,36 @@ export default function Example() {
               OPENING HOURS
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2  grid-flow-row ">
+            <div className="grid grid-cols-1 lg:grid-cols-2  grid-flow-row ">
               <div className="self-center">
                 <p className="text-white my-3 ">
-                  <div className="flex justify-between mx-10 self-center">
-                    <p className="font-bold "> Monday</p> <p>Closed</p>
+                  <div className="flex justify-between mx-5 self-center">
+                    <p className="font-bold "> Monday</p>{" "}
+                    <p className=" text-right">Closed</p>
                   </div>
-                  <div className="flex justify-between mx-10 self-center">
+                  <div className="flex justify-between mx-5 self-center">
                     <p className="font-bold "> Tuesday</p>{" "}
-                    <p> 11:30AM - 10:00PM</p>
+                    <p className=" text-right"> 11:30AM - 10:00PM</p>
                   </div>
-                  <div className="flex justify-between mx-10 self-center">
+                  <div className="flex justify-between mx-5 self-center">
                     <p className="font-bold "> Wednesday</p>{" "}
-                    <p> 11:30AM - 10:00PM</p>
+                    <p className=" text-right"> 11:30AM - 10:00PM</p>
                   </div>
-                  <div className="flex justify-between mx-10 self-center">
+                  <div className="flex justify-between mx-5 self-center">
                     <p className="font-bold "> Thursday</p>{" "}
-                    <p> 11:30AM - 10:00PM</p>
+                    <p className=" text-right"> 11:30AM - 10:00PM</p>
                   </div>
-                  <div className="flex justify-between mx-10 self-center">
+                  <div className="flex justify-between mx-5 self-center">
                     <p className="font-bold "> Friday</p>{" "}
-                    <p> 11:30AM - 10:30PM</p>
+                    <p className=" text-right"> 11:30AM - 10:30PM</p>
                   </div>
-                  <div className="flex justify-between mx-10 self-center">
+                  <div className="flex justify-between mx-5 self-center">
                     <p className="font-bold "> Saturday</p>{" "}
-                    <p> 12:00PM - 10:30PM</p>
+                    <p className=" text-right"> 12:00PM - 10:30PM</p>
                   </div>
-                  <div className="flex justify-between mx-10 self-center">
+                  <div className="flex justify-between mx-5 self-center">
                     <p className="font-bold  "> Sunday</p>{" "}
-                    <p> 12:00PM - 10:00PM</p>
+                    <p className=" text-right"> 12:00PM - 10:00PM</p>
                   </div>
                 </p>
               </div>
@@ -154,34 +155,35 @@ export default function Example() {
               OPENING HOURS
             </h3>
 
-            <div className="grid  grid-cols-1 md:grid-cols-2">
+            <div className="grid  grid-cols-1 lg:grid-cols-2">
               <p className="text-white my-3 ">
-                <div className="flex justify-between mx-10 self-center">
+                <div className="flex justify-between mx-5 self-center">
                   <p className="font-bold "> Monday</p>{" "}
-                  <p> 11:30AM - 10:00PM</p>
+                  <p className=" text-right"> 11:30AM - 10:00PM</p>
                 </div>
-                <div className="flex justify-between mx-10 self-center">
-                  <p className="font-bold "> Tuesday</p> <p> Closed</p>
+                <div className="flex justify-between mx-5 self-center">
+                  <p className="font-bold "> Tuesday</p>{" "}
+                  <p className=" text-right"> Closed</p>
                 </div>
-                <div className="flex justify-between mx-10 self-center">
+                <div className="flex justify-between mx-5 self-center">
                   <p className="font-bold "> Wednesday</p>{" "}
-                  <p> 11:30AM - 10:00PM</p>
+                  <p className=" text-right"> 11:30AM - 10:00PM</p>
                 </div>
-                <div className="flex justify-between mx-10 self-center">
+                <div className="flex justify-between mx-5 self-center">
                   <p className="font-bold "> Thursday</p>{" "}
-                  <p> 11:30AM - 10:00PM</p>
+                  <p className=" text-right"> 11:30AM - 10:00PM</p>
                 </div>
-                <div className="flex justify-between mx-10 self-center">
+                <div className="flex justify-between mx-5 self-center">
                   <p className="font-bold "> Friday</p>{" "}
-                  <p> 11:30AM - 10:30PM</p>
+                  <p className=" text-right"> 11:30AM - 10:30PM</p>
                 </div>
-                <div className="flex justify-between mx-10 self-center">
+                <div className="flex justify-between mx-5 self-center">
                   <p className="font-bold "> Saturday</p>{" "}
-                  <p> 11:30AM - 10:30PM</p>
+                  <p className=" text-right"> 11:30AM - 10:30PM</p>
                 </div>
-                <div className="flex justify-between mx-10 self-center">
+                <div className="flex justify-between mx-5 self-center">
                   <p className="font-bold  "> Sunday</p>{" "}
-                  <p> 11:30AM - 10:30PM</p>
+                  <p className=" text-right"> 11:30AM - 10:30PM</p>
                 </div>
               </p>
 
