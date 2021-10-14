@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 import Noty from "noty";
 import mojs from "@mojs/core";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./component/navbar.component";
-import headerImage from "./assets/1x/header.jpeg";
 import Gallery from "./component/gallery.component";
-import Menu from "./component/Menu/menu.component";
 
 import Career from "./component/careers.component";
 import Contact from "./component/contact.component";

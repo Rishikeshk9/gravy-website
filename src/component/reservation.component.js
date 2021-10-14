@@ -328,6 +328,7 @@ export default function Reservation() {
                       onChange={handleDateChange}
                       ampm={true}
                       name="booking_date"
+                      style={{ color: "#fff" }}
                       minDate={new Date().setHours(new Date().getHours() + 1)}
                     />
                   </MuiPickersUtilsProvider>
